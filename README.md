@@ -15,7 +15,7 @@
 ## 💡 Why ai-tabs?
 
 In the era of AI-driven development, programmers face several key challenges:
-1. **Quota Anxiety**: Individual AI tools (like Claude or Gemini) have limited free tiers and frequently hit rate limits.
+1. **Quota Anxiety**: Powerful tools like Claude Code often lack a free tier, and other providers have strict rate limits.
 2. **Model Bias**: No single model is perfect; complex tasks often require cross-checking and switching between different providers.
 3. **Context Friction**: Switching between various terminal windows is clunky and breaks your "flow."
 
