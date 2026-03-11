@@ -58,10 +58,23 @@ for item in "${SUPPORTED_TOOLS[@]}"; do
     ALREADY=false
     for f in "${FOUND_TOOLS[@]}"; do [[ "$f" == "$NAME" ]] && ALREADY=true && break; done
     [[ "$ALREADY" == true ]] && continue
+    
+    TPATH=""
     TPATH=$(which "$NAME" 2>/dev/null)
     if [ -z "$TPATH" ]; then
-        SPATHS=("/opt/homebrew/bin/$NAME" "/usr/local/bin/$NAME" "$HOME/.local/bin/$NAME" "$HOME/.npm-global/bin/$NAME")
-        for p in "${SPATHS[@]}"; do [[ -x "$p" ]] && TPATH="$p" && break; done
+        SEARCH_PATHS=(
+            "/opt/homebrew/bin/$NAME"
+            "/usr/local/bin/$NAME"
+            "$HOME/.local/bin/$NAME"
+            "$HOME/bin/$NAME"
+            "$HOME/.$NAME/bin/$NAME"
+            "$HOME/.nvm/versions/node/*/bin/$NAME"
+            "$HOME/.npm-global/bin/$NAME"
+            "$HOME/.cargo/bin/$NAME"
+        )
+        for p in "${SEARCH_PATHS[@]}"; do
+            for found_p in $p; do [[ -x "$found_p" ]] && TPATH="$found_p" && break 2; done
+        done
     fi
     if [ -n "$TPATH" ]; then
         FOUND_TOOLS+=("$NAME")
