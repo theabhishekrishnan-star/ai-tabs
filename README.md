@@ -1,6 +1,6 @@
 # ai-tabs (macOS) 🚀
 
-> **Multi-Agent Orchestration for VS Code: One-click batch launch for high-frequency input that ensures "No Rest for Agents" and maximizes model productivity.**
+> **Multi-Agent Orchestration for VS Code: Stop waiting for AI to finish. Batch launch multiple agents into editor tabs so you can switch and keep thinking.**
 
 [English](README.md)| [简体中文](README_zh.md)
 
