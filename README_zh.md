@@ -4,67 +4,74 @@
 
 [English](README.md) | [简体中文](README_zh.md)
 
-不同的 AI CLI 工具（OpenCode, Gemini, Iflow, Kilo 等）通常有各自的免费额度或速率限制。这个工具让您一次性全部打开，这样当一个工具正在忙碌或触及额度上限时，您可以直接切换到另一个继续工作。
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
-
-## 🌟 特性
-
-- **混合发现引擎**: 自动扫描系统路径 (PATH, Brew, NPM, NVM 等)，同时支持通过 `.env` 强制指定特定工具路径。
-- **自愈启动**: 优先尝试恢复上次对话；如果没有历史记录，则自动开启新对话，告别报错。
-- **"编辑器即终端"**: 终端直接作为**独立编辑器标签页**打开，像切换代码文件一样切换 AI 工具。
-- **Turbo 核心**: 结合 AppleScript 与剪贴板桥接，实现极速、精准的自动化引导。
-- **零开销**: 使用 `exec` 替换进程，保持开发环境轻快。
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](#)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](#)
 
 ## 🎥 演示
 
 ![ai-tabs Demo](assets/demo.gif)
 
+## 💡 为什么需要 ai-tabs？
+
+在 AI 辅助编程的时代，开发者往往面临以下痛点：
+1. **额度焦虑**: 单个 AI 工具（如 Claude 或 Gemini）的免费额度有限，频繁触发 Rate Limit。
+2. **模型局限**: 没有一个模型是全能的，复杂任务通常需要在不同模型间来回比对和切换。
+3. **上下文断层**: 在不同的终端窗口间切换，操作繁琐且难以保持专注。
+
+**ai-tabs 的出现，让 AI 们“卷记录，不休息”**：通过将多个 AI CLI 并联为 VS Code 标签页，您可以像切换代码文件一样切换 AI Agent，实现**无缝的生产力接力**。
+
+## 🌟 核心特性
+
+- **"编辑器即终端"**: 终端不再隐藏在底部面板，而是作为**独立编辑器标签页**打开。
+- **混合发现引擎**: 自动扫描系统路径 (PATH, Brew, NPM, NVM 等)，同时支持 `.env` 灵活配置。
+- **自动上下文恢复**: 优先尝试恢复上次对话 (`--continue`/`--resume`)，若无历史则自动开启新绘画。
+- **Turbo 自动化**: 结合 AppleScript 与剪贴板桥接，实现零配置、秒级的一键全启动。
+- **极致轻量**: 基于原生 Bash 脚本，使用 `exec` 替换进程，不累赘、不占资源。
+
+## 🛠 支持自动识别的工具
+
 系统会自动探测以下 CLI 并应用相应的恢复逻辑：
 
-| AI 命令行工具 | 恢复指令 (Resume) |
-| :--- | :--- |
-| **Claude Code** | `--continue` |
-| **OpenCode** | `--continue` |
-| **Gemini CLI** | `--resume latest` |
-| **GitHub Copilot** | `--continue` |
-| **iFlow CLI** | `--continue` |
-| **Cline CLI** | `--continue` |
-| **Kimi CLI** | `--continue` |
-| **Codex CLI** | `resume --last` |
-| **Kilo CLI** | `--continue` |
-
-> [!TIP]
-> 如果恢复指令失败（例如没有历史记录），仪表盘会自动切换到开启“新会话”模式，确保顺滑启动。
+| AI 命令行工具 | 恢复指令 (Resume) | 说明 |
+| :--- | :--- | :--- |
+| **Claude Code** | `--continue` | Anthropic 官方 CLI |
+| **OpenCode** | `--continue` | 极速代码推理 |
+| **Gemini CLI** | `--resume latest` | Google 多模态能力 |
+| **GitHub Copilot** | `--continue` | GitHub 原生支持 |
+| **iFlow CLI** | `--continue` | 结构化任务处理 |
+| **Cline CLI** | `--continue` | 开源 Agent 专家 |
+| **Kimi CLI** | `--continue` | 长文本处理专家 |
+| **Codex CLI** | `resume --last` | 经典代码助手 |
+| **Kilo CLI** | `--continue` | 轻量级推理 |
 
 ## 🚀 快速开始
 
-### 1. 准备工作 (macOS)
+### 1. 准备工作
+- **操作系统**: macOS
+- **编辑器**: VS Code
+- **权限**: 无需特殊配置，脚本运行前会自动引导
 
-无需任何配置！最新版本 (v1.0.0+) 已实现自动指令发现，您甚至不需要手动绑定快捷键。
+### 2. 部署与启动
 
-### 2. 部署
-
-只需将脚本下载到项目根目录即可。
+只需将脚本下载到项目根目录，赋予执行权限即可启动：
 
 ```bash
+# 克隆仓库
 git clone https://github.com/Fu-Jie/ai-tabs.git
-cp ai-tabs/ai-tabs.sh your-project/
-# 可选:
-# cp ai-tabs/.env.example your-project/.env
+
+# 部署并运行
+chmod +x ai-tabs/ai-tabs.sh
+./ai-tabs/ai-tabs.sh
 ```
 
-### 3. 使用
+## ⚙️ 工作原理
 
-赋予执行权限并启动：
-
-```bash
-chmod +x ai-tabs.sh
-./ai-tabs.sh
-```
-
-脚本将自动完成全系统的工具扫描，并在几秒钟内搭建好您的 ai-tabs。
+`ai-tabs` 通过 AppleScript 模拟用户行为，自动完成以下“繁琐”动作：
+1. 启动命令面板 (`Cmd+Shift+P`)。
+2. 搜索并执行“在编辑器区域创建新终端”。
+3. 注入对应的 AI 启动命令并自动恢复会话。
+4. 所有的动作在几秒钟内并行/序列化完成，为您搭建好完整的 AI 指挥台。
 
 ## 📜 许可证
 

@@ -4,73 +4,74 @@
 
 [English](README.md)| [简体中文](README_zh.md)
 
-Different AI CLI tools (OpenCode, Gemini, Iflow, Kilo, etc.) often have their own free tiers or rate limits. This tool lets you open all of them at once so you can use one while another is busy or has hit its quota.
-
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)
-
-## 🌟 Features
-
-- **Hybrid Discovery Engine**: Automatically scans your system (PATH, Brew, NPM, NVM, etc.) but allows manual overrides via `.env`.
-- **Self-Healing Startup**: Attempts to resume your last session; if no history exists, it automatically starts a fresh one.
-- **"Editor-as-UI"**: Your terminals live directly as **Editor Tabs**, providing a clean, tabbed workspace.
-- **Turbo Core**: Uses AppleScript + Clipboard-Paste bridge for high-speed, reliable setup.
-- **Zero Overhead**: Replaces shell processes with `exec`, keeping your workspace clean.
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](#)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](#)
 
 ## 🎥 Demo
 
 ![ai-tabs Demo](assets/demo.gif)
 
+## 💡 Why ai-tabs?
+
+In the era of AI-driven development, programmers face several key challenges:
+1. **Quota Anxiety**: Individual AI tools (like Claude or Gemini) have limited free tiers and frequently hit rate limits.
+2. **Model Bias**: No single model is perfect; complex tasks often require cross-checking and switching between different providers.
+3. **Context Friction**: Switching between various terminal windows is clunky and breaks your "flow."
+
+**ai-tabs ensures there's "No Rest for Agents"**: By orchestrating multiple AI CLIs into VS Code editor tabs, you can switch between AI Agents as easily as switching code files—achieving **seamless productivity relay**.
+
+## 🌟 Key Features
+
+- **"Editor-as-UI"**: Terminals aren't buried in the bottom panel; they live directly as **Editor Tabs**.
+- **Hybrid Discovery Engine**: Automatically scans standard paths (PATH, Brew, NPM, NVM, etc.) while supporting `.env` for custom overrides.
+- **Self-Healing Startup**: Attempts to resume your last session (`--continue`/`--resume`); falls back to a fresh one if no history exists.
+- **Turbo Automation**: Leverages AppleScript + Clipboard bridge for a zero-config, lightning-fast batch launch.
+- **Zero Overhead**: Minimalist Bash script using `exec` to keep your workspace lean and fast.
+
 ## 🛠 Auto-Discovered Tools
 
 The system auto-detects several popular CLIs and applies the following resume logic:
 
-| AI CLI Tool | Resume Strategy |
-| :--- | :--- |
-| **Claude Code** | `--continue` |
-| **OpenCode** | `--continue` |
-| **Gemini CLI** | `--resume latest` |
-| **GitHub Copilot** | `--continue` |
-| **iFlow CLI** | `--continue` |
-| **Cline CLI** | `--continue` |
-| **Kimi CLI** | `--continue` |
-| **Codex CLI** | `resume --last` |
-| **Kilo CLI** | `--continue` |
-
-> [!NOTE]
-> If a tool fails to resume (e.g., no history), the dashboard automatically falls back to a fresh session.
+| AI CLI Tool | Resume Strategy | Notes |
+| :--- | :--- | :--- |
+| **Claude Code** | `--continue` | Official Anthropic CLI |
+| **OpenCode** | `--continue` | High-speed reasoning |
+| **Gemini CLI** | `--resume latest` | Google's Multimodal power |
+| **GitHub Copilot** | `--continue` | Native GitHub support |
+| **iFlow CLI** | `--continue` | Structured task handling |
+| **Cline CLI** | `--continue` | Open-source Agent expert |
+| **Kimi CLI** | `--continue` | Long-context specialist |
+| **Codex CLI** | `resume --last` | Classic coding assistant |
+| **Kilo CLI** | `--continue` | Lightweight inference |
 
 ## 🚀 Quick Start
 
-### 1. Prerequisites (macOS)
+### 1. Prerequisites
+- **OS**: macOS
+- **Editor**: VS Code
+- **Setup**: None! No manual shortcut binding required.
 
-None! The latest version (v1.0.0+) uses automated Command Palette discovery, so you don't even need to bind custom shortcuts.
+### 2. Deployment & Usage
 
-### 2. Simple Deployment
-
-Just download the script to your project root.
+Download the script to your project root, make it executable, and run it:
 
 ```bash
+# Clone the repository
 git clone https://github.com/Fu-Jie/ai-tabs.git
-cp ai-tabs/ai-tabs.sh your-project/
-# Optional:
-# cp ai-tabs/.env.example your-project/.env
+
+# Make executable and run
+chmod +x ai-tabs/ai-tabs.sh
+./ai-tabs/ai-tabs.sh
 ```
-
-### 3. Usage
-
-Make the script executable and run it:
-
-```bash
-chmod +x ai-tabs.sh
-./ai-tabs.sh
-```
-
-The script will scan your system and build your ai-tabs in seconds.
 
 ## ⚙️ How it Works
 
-The script scans standard locations (Brew, NPM, Conda, NVM) and your `PATH`. If a tool is found, it's intelligently added to your ai-tabs with its specific session-resume flag.
+`ai-tabs` automates the "manual friction" using AppleScript:
+1. Triggers the Command Palette (`Cmd+Shift+P`).
+2. Executes "Terminal: Create New Terminal in Editor Area."
+3. Injects the specific AI start command and restores the session.
+4. Orchestrates everything in seconds, building your full AI Command Center.
 
 ## 📜 License
 
