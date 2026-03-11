@@ -1,8 +1,8 @@
 # ai-tabs (macOS) 🚀
 
-[English](README.md) | [简体中文](README_zh.md)
+> **一键批量启动多个 AI CLI 工具为 VS Code 编辑器标签页，助您轻松打通多模型工作流。**
 
-> **在 macOS 上一键批量打开多个 AI CLI 工具为 VS Code 的“编辑器标签页”。**
+[English](README.md) | [简体中文](README_zh.md)
 
 不同的 AI CLI 工具（OpenCode, Gemini, Iflow, Kilo 等）通常有各自的免费额度或速率限制。这个工具让您一次性全部打开，这样当一个工具正在忙碌或触及额度上限时，您可以直接切换到另一个继续工作。
 

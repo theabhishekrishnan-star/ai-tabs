@@ -1,8 +1,8 @@
 # ai-tabs (macOS) 🚀
 
-[English](README.md)| [简体中文](README_zh.md)
+> **One-click batch launch of multiple AI CLIs as VS Code tabs for effortless multi-model workflows.**
 
-> **One-click batch launch of multiple AI CLI tools as individual Editor Tabs in VS Code on macOS.**
+[English](README.md)| [简体中文](README_zh.md)
 
 Different AI CLI tools (OpenCode, Gemini, Iflow, Kilo, etc.) often have their own free tiers or rate limits. This tool lets you open all of them at once so you can use one while another is busy or has hit its quota.
 
