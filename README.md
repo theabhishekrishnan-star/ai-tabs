@@ -29,6 +29,9 @@ In the era of AI-driven development, programmers face several key challenges:
     - Use **OpenCode** to profile performance bottlenecks in real-time.
 - **Maximize Free Quotas**: Seamlessly relay tasks between different providers. If one hits a rate limit, simply click the next tab and keep moving.
 
+> [!TIP]
+> **Free Tier Strategy**: While Claude Code lacks a native free tier, you can use a **Gemini API Key** (via Google AI Studio's free monthly quota) with open-source Gemini CLI tools to achieve a completely free Multi-Agent workflow.
+
 ## 🌟 Key Features
 
 - **"Editor-as-UI"**: Terminals aren't buried in the bottom panel; they live directly as **Editor Tabs**.
