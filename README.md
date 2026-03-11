@@ -1,6 +1,6 @@
 # ai-tabs (macOS) 🚀
 
-> **One-click batch launch of multiple AI CLIs as VS Code tabs for effortless multi-model workflows.**
+> **Multi-Agent Orchestration for VS Code: One-click batch launch of AI CLIs to ensure "No Rest for Agents" and maximize multi-model productivity.**
 
 [English](README.md)| [简体中文](README_zh.md)
 
