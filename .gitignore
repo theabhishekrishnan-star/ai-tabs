@@ -1,0 +1,12 @@
+# Sensitive Info
+.env
+
+# MacOS temporary files
+.DS_Store
+
+# Temporary runtime files
+/tmp/ai_terminal_launch.lock
+*.log
+
+# VS Code specific (if any)
+.vscode/
