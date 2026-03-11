@@ -15,7 +15,7 @@
 ## 💡 Why ai-tabs?
 
 In the era of AI-driven development, programmers face several key challenges:
-1. **Quota Anxiety**: Powerful tools like Claude Code often lack a free tier, and other providers have strict rate limits.
+1. **Quota Anxiety**: Many AI coding tools have strict rate limits or require paid subscriptions, limiting your productivity.
 2. **Model Bias**: No single model is perfect; complex tasks often require cross-checking and switching between different providers.
 3. **Context Friction**: Switching between various terminal windows is clunky and breaks your "flow."
 
@@ -30,9 +30,9 @@ In the era of AI-driven development, programmers face several key challenges:
 - **Maximize Free Quotas**: Seamlessly relay tasks between different providers. If one hits a rate limit, simply click the next tab and keep moving.
 
 > [!TIP]
-> **Free Tier Strategy**: While Claude Code lacks a native free tier, you can:
-> 1. Use a **Gemini API Key** (via Google AI Studio's free monthly quota) with Gemini CLI tools.
-> 2. Switch to **iFlow** and utilize the **Minimax M2.5** model for a smooth, cost-free Multi-Agent workflow.
+> **Free Tier Strategy**: These tools offer free quotas with just an account:
+> 1. **Gemini CLI** — Sign up at Google AI Studio for a free API Key with generous monthly quota.
+> 2. **iFlow** — Comes with free access to the **Minimax M2.5** model out of the box.
 
 ## 🌟 Key Features
 
