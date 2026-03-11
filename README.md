@@ -1,6 +1,6 @@
 # ai-tabs (macOS) 🚀
 
-> **Multi-Agent Orchestration for VS Code: Stop waiting for AI to finish. Batch launch multiple agents into editor tabs so you can switch and keep thinking.**
+> **One AI agent? You rest while it thinks. Multiple agents? Now YOU never rest either. 😂**
 
 [English](README.md)| [简体中文](README_zh.md)
 
