@@ -30,7 +30,9 @@ In the era of AI-driven development, programmers face several key challenges:
 - **Maximize Free Quotas**: Seamlessly relay tasks between different providers. If one hits a rate limit, simply click the next tab and keep moving.
 
 > [!TIP]
-> **Free Tier Strategy**: While Claude Code lacks a native free tier, you can use a **Gemini API Key** (via Google AI Studio's free monthly quota) with open-source Gemini CLI tools to achieve a completely free Multi-Agent workflow.
+> **Free Tier Strategy**: While Claude Code lacks a native free tier, you can:
+> 1. Use a **Gemini API Key** (via Google AI Studio's free monthly quota) with Gemini CLI tools.
+> 2. Switch to **iFlow** and utilize the **Minimax M2.5** model for a smooth, cost-free Multi-Agent workflow.
 
 ## 🌟 Key Features
 

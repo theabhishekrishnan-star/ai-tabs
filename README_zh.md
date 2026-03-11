@@ -30,7 +30,9 @@
 - **资源利用最大化**: 灵活调度不同模型的免费额度，一个模型触碰 Rate Limit 时，点击标签页即可无缝接力。
 
 > [!TIP]
-> **薅羊毛攻略**: 虽然 Claude Code 目前没有原生免费额度，但您可以使用 **Gemini API Key** (Google AI Studio 提供每月免费额度)，配合开源的 Gemini CLI 工具实现完全免费的多 Agent 编程体验。
+> **薅羊毛攻略**: 虽然 Claude Code 目前没有原生免费额度，但您可以：
+> 1. 使用 **Gemini API Key** (Google AI Studio 提供每月免费额度)，配合其 CLI 工具使用。
+> 2. 切换至 **iFlow** 使用 **Minimax M2.5** 模型，获得流畅且免费的多 Agent 编程体验。
 
 ## 🌟 核心特性
 
